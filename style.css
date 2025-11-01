@@ -6,12 +6,12 @@
     --primary-light-blue: #60a5fa;
     --primary-green: #059669;
     --primary-light-green: #10b981;
-    --accent-gold: #f59e0b;
-    --accent-light-gold: #fbbf24;
+    --accent-gold: #a8acab;
+    --accent-light-gold: #2fc9ec;
     --text-dark: #1f2937;
     --text-light: #6b7280;
     --background-light: #f8fafc;
-    --secondary-gold: #d4af37; /* ADD THIS LINE */
+    --secondary-gold: #a8d9f0; /* ADD THIS LINE */
 }
 
         html {
@@ -97,7 +97,7 @@
 
         /* Button Styles */
         .btn-primary-custom {
-            background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
+            background: rgb(47, 146, 155);
             border: none;
             color: white;
             padding: 12px 30px;
@@ -126,7 +126,7 @@
         }
 
         .btn-gold-custom {
-            background: linear-gradient(135deg, var(--accent-gold), var(--accent-light-gold));
+            background: rgb(55, 91, 94);
             border: none;
             color: white;
             padding: 12px 30px;
@@ -261,7 +261,7 @@
         /* Media Queries */
         @media (max-width: 768px) {
             .counter { font-size: 2rem; }
-            .hero-title { font-size: 2.5rem !important; }
+            .hero-title { font-size: 2rem !important; }
             .fab, .whatsapp-float { bottom: 20px; right: 20px; width: 50px; height: 50px; }
         }
     
