@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section with Video Background</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+        }
+
+        .video-background video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: -1;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            padding: 0 20px;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #ff5722;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            background: #ff7043;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Animated lines */
+        .line {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.2);
+            z-index: 0;
+        }
+
+        .vertical-line {
+            width: 2px;
+            height: 0;
+            top: 0;
+            left: 20%;
+            /* Total animation duration: 17s */
+            animation: verticalLine 17s infinite ease-in-out;
+        }
+
+        .horizontal-line {
+            height: 2px;
+            width: 0;
+            bottom: 20%;
+            right: 0;
+            /* Total animation duration: 17s */
+            animation: horizontalLine 17s infinite ease-in-out;
+        }
+
+        @keyframes verticalLine {
+            0% {
+                height: 0;
+            }
+            /* 1s to animate in (0% to 5.88%) */
+            5.88% {
+                height: 100%;
+            }
+            /* Stay for 15s (until 94.12%) */
+            94.12% {
+                height: 100%;
+            }
+            /* Reset and wait 1s */
+            100% {
+                height: 0;
+            }
+        }
+
+        @keyframes horizontalLine {
+            0% {
+                width: 0;
+            }
+            /* 1s to animate in (0% to 5.88%) */
+            5.88% {
+                width: 100%;
+            }
+            /* Stay for 15s (until 94.12%) */
+            94.12% {
+                width: 100%;
+            }
+            /* Reset and wait 1s */
+            100% {
+                width: 0;
+            }
+        }
+
+        /* Timer indicator */
+        .timer-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-content p {
+                font-size: 1rem;
+            }
+            
+            .vertical-line {
+                left: 10%;
+            }
+            
+            .horizontal-line {
+                bottom: 10%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section with Video Background -->
+    <section class="hero">
+        <div class="video-background">
+            <!-- Replace with your video URL -->
+            <video autoplay muted loop>
+                <source src="https://assets.codepen.io/3364143/720.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        
+        <div class="overlay"></div>
+        
+        <!-- Animated lines -->
+        <div class="line vertical-line"></div>
+        <div class="line horizontal-line"></div>
+        
+        <div class="hero-content">
+            <h1>Welcome to Our World</h1>
+            <p>Experience the future with our innovative solutions designed to transform your business and exceed expectations.</p>
+            <a href="#" class="cta-button">Get Started</a>
+        </div>
+        
+    </section>
+    
+    <script>
+        // Countdown timer for animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const countdownElement = document.getElementById('countdown');
+            let countdown = 17;
+            
+            // Update countdown every second
+            const countdownInterval = setInterval(() => {
+                countdownElement.textContent = countdown;
+                countdown--;
+                
+                // Reset countdown when it reaches 0
+                if (countdown < 0) {
+                    countdown = 17;
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

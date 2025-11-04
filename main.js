@@ -222,3 +222,24 @@ if (darkModeToggle) {
         }
     });
 }
+
+
+// Initialize Bootstrap tooltips
+// Countdown timer for animation
+document.addEventListener('DOMContentLoaded', function() {
+    const countdownElement = document.getElementById('countdown');
+    if (countdownElement) {
+        let countdown = 17;
+        
+        // Update countdown every second
+        const countdownInterval = setInterval(() => {
+            countdownElement.textContent = countdown;
+            countdown--;
+            
+            // Reset countdown when it reaches 0
+            if (countdown < 0) {
+                countdown = 17;
+            }
+        }, 1000);
+    }
+});
