@@ -9,7 +9,7 @@ AOS.init({
 function animateCounters() {
     const counters = [
         { id: 'counter1', target: 20, suffix: '+' },
-        { id: 'counter2', target: 20000, suffix: '+' },
+        { id: 'counter2', target: 30000, suffix: '+' },
         { id: 'counter3', target: 1000, suffix: '+' },
         { id: 'counter4', target: 4.9, suffix: '' }
     ];
@@ -146,7 +146,7 @@ document.querySelectorAll('[data-course]').forEach(button => {
                     <button class="btn btn-primary-custom me-2" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#bookingModal">
                         <i class="fas fa-calendar-alt me-2"></i>Book Free Demo
                     </button>
-                    <a href="tel:+919705454000" class="btn btn-gold-custom">
+                    <a href="tel:+9247592303" class="btn btn-gold-custom">
                         <i class="fas fa-phone me-2"></i>Call for Details
                     </a>
                 </div>
@@ -243,3 +243,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 1000);
     }
 });
+
+
