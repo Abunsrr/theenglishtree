@@ -101,7 +101,7 @@
             color: white;
             padding: 12px 30px;
             border-radius: 50px;
-            font-weight: 600;
+            font-weight: 00;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             transition: all 0.3s ease;
@@ -500,8 +500,23 @@
     height: 100vh;
     width: 100%;
     overflow: hidden;
-
+    padding-top: 40px; /* desktop OK */
 }
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+
+    /* Hero spacing balanced */
+    .hero-section {
+        padding-top: 10px;   /* navbar + gap */
+        padding-bottom: 10px; /* for symmetry */
+        height: auto;
+        min-height: 80vh;
+    }
+}
+
+
+
 
 .video-background {
     position: absolute;

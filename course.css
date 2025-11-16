@@ -506,3 +506,31 @@
     background: linear-gradient(135deg, #8b5cf6, #7c3aed);
     color: white;
 }
+
+
+.footer-social-icon a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.6);
+    margin-right: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer-social-icon a i {
+    color: white;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.footer-social-icon a:hover {
+    background: var(--secondary-gold);
+    border-color: var(--secondary-gold);
+}
+
+.footer-social-icon a:hover i {
+    color: white;
+}
