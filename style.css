@@ -497,10 +497,11 @@
 /* Hero Section with Video Background */
 .hero-section {
     position: relative;
+    margin-top: 78px;
     height: 100vh;
     width: 100%;
     overflow: hidden;
-    padding-top: 40px; /* desktop OK */
+    
 }
 
 /* MOBILE FIX */
@@ -511,6 +512,7 @@
         padding-top: 10px;   /* navbar + gap */
         padding-bottom: 10px; /* for symmetry */
         height: auto;
+        margin-top: 10px;
         min-height: 80vh;
     }
 }
